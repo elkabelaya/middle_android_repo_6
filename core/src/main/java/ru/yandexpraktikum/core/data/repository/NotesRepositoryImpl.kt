@@ -1,5 +1,6 @@
 package ru.yandexpraktikum.core.data.repository
 
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import ru.yandexpraktikum.core.data.db.NoteDao
@@ -10,10 +11,10 @@ import ru.yandexpraktikum.core.domain.repository.NotesRepository
 /**
  * TODO("Add documentation")
  */
-class NotesRepositoryImpl(
+internal class NotesRepositoryImpl @Inject constructor(
     private val noteDao: NoteDao,
     private val noteMapper: DataNoteMapper
-): NotesRepository {
+) : NotesRepository {
     override suspend fun insertNote(note: Note) {
         return noteDao.insert(
             noteMapper.mapToEntity(note))

@@ -110,7 +110,7 @@ fun AllNotesScreen(
 }
 
 @Composable
-fun NotesList(
+internal fun NotesList(
     notes: List<NoteUi>,
     onDeleteClick: (NoteUi) -> Unit
 ) {
@@ -125,7 +125,7 @@ fun NotesList(
 }
 
 @Composable
-fun NoteItem(
+internal fun NoteItem(
     note: NoteUi,
     onDeleteClick: (NoteUi) -> Unit
 ) {

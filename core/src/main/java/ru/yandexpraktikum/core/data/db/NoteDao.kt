@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import ru.yandexpraktikum.core.data.model.NoteEntity
 
 @Dao
-interface NoteDao {
+internal interface NoteDao {
     @Insert
     suspend fun insert(note: NoteEntity)
 

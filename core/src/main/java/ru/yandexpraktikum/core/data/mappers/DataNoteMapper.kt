@@ -3,7 +3,7 @@ package ru.yandexpraktikum.core.data.mappers
 import ru.yandexpraktikum.core.data.model.NoteEntity
 import ru.yandexpraktikum.core.domain.model.Note
 
-class DataNoteMapper {
+internal class DataNoteMapper {
     fun mapToDomain(note: NoteEntity): Note {
         return Note(
             id = note.id,

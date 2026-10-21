@@ -5,6 +5,6 @@ import androidx.room.RoomDatabase
 import ru.yandexpraktikum.core.data.model.NoteEntity
 
 @Database(entities = [NoteEntity::class], version = 1, exportSchema = false)
-abstract class NoteDatabase : RoomDatabase() {
+internal abstract class NoteDatabase : RoomDatabase() {
     abstract fun noteDao(): NoteDao
 }
